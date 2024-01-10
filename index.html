@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,16 @@
 </head>
 <body>
     <script>
-        document.body.innerHTML = `
-        <h1>ようこそPlaywrightテストページへ</h1>
-        <h2>サイトへのリンク</h2>
-        <ul>
-            <li><a href="https://www.nnn.ed.nico/">N予備校</a></li>
-            <li><a href="https://zen-univ.jp/">ZEN大学</a></li>
-        </ul>
-        `;
+        const h1 = document.createElement('h1');
+        h1.innerText = 'ようこそPlaywrightテストページへ';
+        document.body.appendChild(h1);
+        const h2 = document.createElement('h2');
+        h2.innerText = 'おすすめサイトのリンク';
+        document.body.appendChild(h2);
+        const ul = document.createElement('ul');
+        ul.innerHTML = `<li><a href="https://www.nnn.ed.nico/">N予備校</a></li>
+            <li><a href="https://zen-univ.jp/">ZEN大学</a></li>`
+        document.body.appendChild(ul);
     </script>
 </body>
 </html>
